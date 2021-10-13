@@ -49,7 +49,10 @@ export default function SignInSide() {
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid item xs={false} sm={4} md={7} >
-          <img src={BackGround} alt="imagem" width={100} />
+          <img src={BackGround} alt="imagem" />
+          <img src={BackGround} alt="imagem" />
+          <img src={BackGround} alt="imagem" />
+          <img src={BackGround} alt="imagem" />
         </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{ bgcolor: '#ffcc9' }} >
           <Box sx={{ my: 8, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', }} >
