@@ -14,7 +14,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems, secondaryListItems } from '../../components/menu.js';
 import ImgLogo from '../../assets/img/UpLife.png';
-import TabelaCadastro from '../../components/tabelacadastro';
+import AtualizacaodeCadastro from '../../components/atualizacaodecadastro';
+
+
 
 
 const drawerWidth = 240;
@@ -40,33 +42,21 @@ const AppBar = styled(MuiAppBar, {
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
-      position: 'relative',
-      whiteSpace: 'nowrap',
-      width: drawerWidth,
+      position: 'relative', whiteSpace: 'nowrap',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
-      }),
-      boxSizing: 'border-box',
+      }), boxSizing: 'border-box',
       ...(!open && {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-          width: theme.spacing(9),
-        },
+        overflowX: 'hidden', transition: theme.transitions.create('width', { easing: theme.transitions.easing.sharp, }),
+        width: theme.spacing(7), [theme.breakpoints.up('sm')]: { width: theme.spacing(9), },
       }),
     },
   }),
 );
 
 const mdTheme = createTheme({
-  palette: {
-    primary: { main: '#000000', }, secondary: { main: '#fe0006', },
-  },
+  palette: { primary: { main: '#000000', }, secondary: { main: '#fe0006', }, },
 });
 
 function DashboardContent() {
@@ -105,7 +95,7 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Cadastro de Alunos
+              Editar Dados de Aluno
             </Typography>
 
 
@@ -131,7 +121,7 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <TabelaCadastro />
+            <AtualizacaodeCadastro />
           </Container>
         </Box>
       </Box>

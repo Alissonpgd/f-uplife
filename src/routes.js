@@ -20,7 +20,7 @@ export default function Routes() {
                 <Route path="/" exact component={Login} />
                 <Route path="/menu" exact component={Menu} />
                 <Route path="/cadastrar" exact component={CadastrarAlunos} />
-                <Route path="/atualizar" exact component={AlunosAtualizar} />
+                <Route path="/atualizar/:_id" exact component={AlunosAtualizar} />
                 <Route path="/listar" exact component={AlunosListagem} />
                 <Route path="/aluno/:_id" exact component={AlunosDados} />
                 <Route path="/treino" exact component={Treino} />
